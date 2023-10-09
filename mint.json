@@ -1,0 +1,66 @@
+{
+    "name": "Particl",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+      "primary": "#2563EB",
+      "light": "#5187FF",
+      "dark": "#2563EB"
+    },
+    "topbarCtaButton": {
+      "name": "Request a Demo",
+      "url": "https://www.particl.com/demo"
+    },
+    "topbarLinks": [
+      {
+        "name": "Login",
+        "url": "https://app.particl.com/"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "Help Center",
+        "icon": "block-question",
+        "url": "https://help.particl.com/"
+      },
+      {
+        "name": "Privacy Policy",
+        "icon": "lock",
+        "url": "https://www.particl.com/legal/privacy"
+      }
+    ],
+    "tabs": [
+        {
+            "name": "API Reference",
+            "url": "api-reference"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "Particl API",
+            "pages": [
+              "code-examples",
+              "rate-limits",
+              "query-company-sales",
+              "api-glossary",
+              "faq"
+            ]
+        },
+        {
+            "group": "API Reference",
+            "pages": [
+                "api-reference/fetch-an-audio-file-with-the-name-pronunciation-of-an-employee",
+                "api-reference/fetch-project-stats-for-a-given-user-1",
+                "api-reference/fetch-project-stats-for-a-given-user",
+                "api-reference/fetch-the-profile-picture-of-an-employee"
+            ]
+        }
+    ],
+    "footerSocials":
+      {
+          "linkedin": "https://www.linkedin.com/company/getparticl/"
+      }
+  }

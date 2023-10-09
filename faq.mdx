@@ -1,0 +1,10 @@
+---
+title: "FAQ"
+---
+
+**How to resolve timeout errors?**
+
+When an API response comes back as a status code 504 and message: "Endpoint request timed out", that means the request made took longer than 30 seconds to return a response. This can be resolved a few ways.
+
+1. Use a smaller date range. Some large companies with thousands of unique variants are just too large to query a year or more worth of a data in a single response. Try splitting the request into several smaller date ranges.
+2. Use CSV Export to export large amounts of data at once.

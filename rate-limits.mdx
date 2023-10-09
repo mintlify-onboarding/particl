@@ -1,0 +1,26 @@
+---
+title: "Rate Limits"
+description: "A rate limit is a restriction that an API imposes on the number of times a user or client can access the server within a specified period of time."
+---
+
+#### Why do we have rate limits?
+
+Rate limits are a common practice for APIs, and they’re put in place for a few different reasons:
+
+* They help protect against abuse or misuse of the API. For example, a malicious actor could flood the API with requests in an attempt to overload it or cause disruptions in service. By setting rate limits, we can prevent this kind of activity.
+* Rate limits help ensure that everyone has fair access to the API. If one person or organization makes an excessive number of requests, it could bog down the API for everyone else. By throttling the number of requests that a single user can make, we ensure that the most number of people have an opportunity to use the API without experiencing slowdowns.
+* Rate limits can help us manage the aggregate load on our infrastructure. If requests to the API increase dramatically, it could tax the servers and cause performance issues. By setting rate limits, we can help maintain a smooth and consistent experience for all users.
+
+#### Limits
+
+Our rate limiting policy has the following limits:
+
+* **10 requests per second**: As an individual, you cannot make more than 10 requests to the API in a single second.
+* **100 requests per minute**: As an individual, you cannot make more than 100 requests to the API in a single minute.
+* **10,000 requests per day**: As a group/team, you cannot make more than 10,000 requests to the API in a single day.
+
+#### Handling rate limit errors
+
+When you exceed the rate limit, our API will return a `429 Too Many Requests` HTTP status code. This means that you have made too many requests and you should wait before making additional requests.
+
+To avoid hitting the rate limit, we recommend that you implement a strategy for handling rate limit errors in your application. This could include slowing down the rate at which you make requests or implementing a caching strategy to reduce the number of requests you need to make.

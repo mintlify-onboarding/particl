@@ -1,0 +1,31 @@
+---
+title: "Query Company Sales"
+---
+
+### Query a Company's sales numbers for a date range
+
+Particl uses IDs internally to connect all data. Find a specific company's id using [Company Search](/reference/company-search). Use that company id to query sales data for a specific date range.
+
+```Python Python
+import requests
+import json
+
+# constants
+headers = {
+    'authorization': '<your-api-token>',
+}
+params = {
+    "start_date": "2023-01-16", 
+    "end_date": "2023-02-14"
+}
+
+company_id = "1111111" # Particl assigned company_id retrieved from company search
+
+response = requests.get(f'https://api.particl.com/companies/{company_id}/sales', params=params, headers=headers)
+
+print(json.loads(response.text))
+```
+
+#### See [Company Sales](/reference/company-sales) for more details
+
+[](#see-company-sales-for-more-details)

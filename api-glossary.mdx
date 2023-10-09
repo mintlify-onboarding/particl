@@ -1,0 +1,133 @@
+---
+title: "Particl Data Dictionary"
+description: "Definitions of common terms used in the Particl API and in Reporting"
+---
+
+## Response Data Dictionary
+
+### Company Response Definitions
+
+| Name                       | Description                                                                                                                             | Type       |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| company\_id                | A unique id representing a company                                                                                                      | String     |
+| name                       | A name of a company                                                                                                                     | String     |
+| vertical\_pc               | A vertical’s product category                                                                                                           | String     |
+| social                     | A dictionary of social networks that a company represents                                                                               | Dictionary |
+| location                   | A dictionary representing the address of a company (city, state, zip code, and country)                                                 | Dictionary |
+| revenue                    | A company’s or product’s total revenue made over a specified period of time                                                             | Decimal    |
+| units\_moved               | A company’s or product’s total units moved over a specified period of time                                                              | Integer    |
+| revenue\_growth            | The percentage a company has grown over a specified period of time                                                                      | Decimal    |
+| average\_product\_price    | average price of all products for a specified company                                                                                   | Decimal    |
+| product\_count             | Total number of products that a company sales                                                                                           | Integer    |
+| variant\_count             | Total number of variants/skus that a company sales                                                                                      | Integer    |
+| timeseries                 | A list of days that display sales related information at either a product or company level. (product sales or company sales)            | List       |
+| app                        | Average Product Price for a company                                                                                                     | Decimal    |
+| pc                         | Product Count, the number of products a company has for a given day                                                                     | Integer    |
+| vc                         | Variant Count, the number of variants a company has for a given day                                                                     | Integer    |
+| top\_products              | Top performing products for a company or collection                                                                                     | Dictionary |
+| collection                 | a collection of companies that a user can create and define                                                                             | Dictionary |
+| prev\_period\_units\_moved | When comparing two date ranges, this indicates how many units were previously moved                                                     | Integer    |
+| prev\_period\_revenue      | When comparing two date ranges, this indicates how much revenue was previously made                                                     | Integer    |
+| growth\_rate               | When comparing two date ranges, this indicates the growth of the second range over the first                                            | Decimal    |
+| units\_moved\_growth\_rate | When comparing two date ranges, this indicates the change in number of products sold                                                    | Decimal    |
+| product\_id                | A unique id (by company) that identifies a specific product                                                                             | String     |
+| variant\_id                | A unique id (by company and product) that identifies a specific variant (sku) of a product                                              | String     |
+| title                      | A title representing a product                                                                                                          | String     |
+| url                        | url representing a link to the actual product page on the company’s site                                                                | String     |
+| date                       | Represents when either an event or data collection occurred                                                                             | String     |
+| event\_name                | Type of Recent Event (price\_change, new\_product, variant\_sold\_out, variant\_restock)                                                | String     |
+| price\_change              | An event that represents price changes                                                                                                  | Dictionary |
+| new\_product               | An event that represents new product launches                                                                                           | Dictionary |
+| variant\_sold\_out         | An event that represents when a specific variant/sku sells out                                                                          | Dictionary |
+| variant\_restock           | An event that represents when a specific variant/sku restocks                                                                           | Dictionary |
+| original\_price            | The original price of a product/variant                                                                                                 | Decimal    |
+| new\_price                 | The new price of a product/variant                                                                                                      | Decimal    |
+| price\_change              | A value amount that represents how much a product price has changed                                                                     | Decimal    |
+| image                      | A url that links to an image hosted by the company we are tracking                                                                      | String     |
+| sold\_out\_volume          | The number of latest units sold until the product/variant was sold out                                                                  | Integer    |
+| restock\_amount            | The number of units that were restocked for a product/variant                                                                           | Integer    |
+| last\_updated              | When an event or data entry was last updated                                                                                            | String     |
+| recommend\_type            | A type of notification that is presented in our app. Invites a user to explore certain values regarding a customer’s tracked companies. | String     |
+| sales\_spike               | A recommendation (notification) that represents a sales\_spike for a specific company                                                   | Dictionary |
+| additional\_stats          | A value specific to recommendations (notifications) that hold additional data for a specific recommend\_type                            | Dictionary |
+| sales\_revenue\_original   | A company’s original revenue value                                                                                                      | Decimal    |
+| spike\_occured\_on         | A date when a sales\_spike occurred                                                                                                     | String     |
+| sales\_revenue             | A company, product, or variant sales                                                                                                    | Decimal    |
+| sales\_volume\_original    | The original recorded volume (A value used before processing occurs)                                                                    | Decimal    |
+| created\_on                | The date an event was added to our database                                                                                             | String     |
+| monthly\_revenue           | A company’s revenue updated monthly, utilized for filtering searches                                                                    | Decimal    |
+| term                       | A category used in searching                                                                                                            | String     |
+| vertical\_pc               | A vertical product count, which represents the number of products in select categories within a company                                 | Integer    |
+| vertical\_rev\_percent     | A vertical revenue percentage, which represents the percent of select categories within a company                                       | Decimal    |
+| rev\_percent               | The revenue percentage that represents the percentage a product category represents within a company product type                       | Decimal    |
+| verticals                  | A list of different categories of products that a company sales                                                                         | List       |
+| traffic\_rank              | A value that represents how popular a site is, the lower the value, the more popular a site is.                                         | Integer    |
+| product\_title             | A title representing a product                                                                                                          | String     |
+| product\_url               | url representing a link to the actual product page on the company’s site                                                                | String     |
+| product\_type              | A classification for a specific product                                                                                                 | String     |
+| display\_title             | A title representing a product                                                                                                          | String     |
+| velocity                   | A value for product that represents how well it is selling (higher the better)                                                          | Decimal    |
+| raw\_revenue               | Revenue value before additional processing has occurred                                                                                 | Decimal    |
+| raw\_units\_moved          | Number of units moved before processing has occurred                                                                                    | Integer    |
+| images                     | a list of URLs that correspond to image urls for a product                                                                              | List       |
+| price                      | the current price of a product/variant                                                                                                  | Decimal    |
+| gender                     | A product classifier determine the gender of a product                                                                                  | String     |
+| colors                     | If applicable, this list represents the color options for a product                                                                     | List       |
+| sizes                      | If applicable, this list represents the sizes for a product                                                                             | List       |
+| unique\_colors             | Colors of products that a company sales                                                                                                 | List       |
+| unique\_genders            | Genders that a company typically creates products for                                                                                   | List       |
+| unique\_product\_types     | Product types that a company typically creates and sells products for                                                                   | List       |
+| topic                      | A topic associated with subtopics for classifying purposes                                                                              | String     |
+| sub\_topic                 | A subtopic of a topic for classifying purposes                                                                                          | String     |
+
+### Product Response Definitions
+
+| Name                          | Description                                                                                                       | Type    |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
+| luz\_similarity\_score        | This score represents how similar two products are to each other. The higher the value, the more similar they are | Decimal |
+| image\_score                  | The similarity score of two image                                                                                 | Decimal |
+| price\_score                  | The similarity score of two prices                                                                                | Decimal |
+| size\_score                   | The similarity score of two sizes                                                                                 | Decimal |
+| gender\_score                 | The similarity score of two genders                                                                               | Decimal |
+| scraped\_product\_type\_score | the similarity score of two product types/categories score                                                        | Decimal |
+| title\_score                  | The similarity score of two titles                                                                                | Decimal |
+| skus                          | A List of skus/variant ids that uniquely identify a variant                                                       | String  |
+| average\_price                | average price of all products for a specified company                                                             | Decimal |
+| average\_variant\_price       | average price of all variants for a specified company                                                             | Decimal |
+| total\_inventory              | The number of units for a specified product                                                                       | Decimal |
+| units\_moved                  | The number of units moved for a specified product                                                                 | Integer |
+| restock                       | A True or False value that represents if a variant was restocked on a specified day or not                        | Boolean |
+| description                   | A description of a specified product                                                                              | String  |
+
+## Generated Reports and Emails
+
+### Company Export
+
+| Name           | Description                                                              | Type    |
+| -------------- | ------------------------------------------------------------------------ | ------- |
+| date           | The day the item was collected                                           | String  |
+| variant\_id    | A value representing a sku of a specific product                         | String  |
+| company        | Name of the company                                                      | String  |
+| product        | Title of the product                                                     | String  |
+| url            | url representing a link to the actual product page on the company’s site | String  |
+| current\_price | The current price of the variant/product at the time of data collection  | Decimal |
+| sales\_volume  | The amount of units sold (of a product) on that date                     | Integer |
+| inventory      | The amount of units remaining for a specific variant/product             | Integer |
+
+### Findings Report
+
+| Name                    | Description                                                                                           | Type    |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+| product\_sales\_revenue | Total sales revenue made for the top 5 performing products in comparison to a company’s total revenue | Decimal |
+| top\_variants           | Top Performing Variants/Skus for a company                                                            | List    |
+| revenue                 | Total revenue made for a product or variant                                                           | Decimal |
+| volume                  | Number of units sold                                                                                  | Integer |
+| name                    | Name of the product or variant                                                                        | String  |
+
+### Weekly Report
+
+| Name          | Description                                                                                             | Type    |
+| ------------- | ------------------------------------------------------------------------------------------------------- | ------- |
+| Revenue       | Total weekly revenue for a company, and the trend shows changes relative to the previous week           | Decimal |
+| unit\_volume  | Total number of products sold over the past week, the trend shows changes relative to the previous week | Integer |
+| top\_products | A list of the top performing products with sales revenue and units sold associated with each one        | List    |

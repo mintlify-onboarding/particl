@@ -1,0 +1,58 @@
+---
+title: "Getting Started"
+description: "Examples in Python of how to effectively use the Particl API"
+---
+
+The Particl API provides programmatic access to Particl's data set, allowing customers to streamline data into their own systems. It's a REST api that allows apps to query company and product level data. 
+
+For quick start examples of how to effectively use Particl's API see below.
+
+Visit [API Reference](/reference) to see all available endpoints.
+
+##### Authentication
+
+The Particl API uses API keys to authenticate requests. API keys are managed in the [My Account page in the Particl App](https://app.particl.com/dashboard/account). Authorization is done through an `Authorization` header.
+
+```
+headers = {
+    'authorization': '<your-api-token>',
+}
+```
+
+### Find a Company's ID with Company Search
+
+Particl uses IDs internally to connect all data. Many companies hoping to use the Particl API begin with a list of domains. In order to connect a domain to an ID, you can hit the Company Search endpoint.
+
+```Python Python
+import requests
+import json
+
+# constants
+domain_to_search = "kith.com"
+headers = {
+    'authorization': '<your-api-token>',
+}
+params = (
+    ('domain', domain_to_search),
+)
+
+# make a response
+response = requests.get('https://api.particl.com/companies/list', headers=headers, params=params)
+
+# print response
+print(json.loads(response.text))
+```
+
+This response will have a list of companies matching the domain. 
+
+<Note>
+    **API Development in progress**
+
+    We're currently working on the ability to query endpoints by passing in a domain as a parameter, for now we require users to first hit our company search endpoint to collect IDs.
+
+    The reason being domains are not cemented in stone (ie can change over time) and there are issues with uniqueness when you introduce subdomains and localized domains.
+</Note>
+
+#### See [Query Company Sales](/docs/query-company-sales) next to learn how to get Company Level Sales Data
+
+[](#see-query-company-sales-next-to-learn-how-to-get-company-level-sales-data)
